@@ -1,0 +1,15 @@
+Package: HomiePackage1.0
+Title: creates graphs, designed for my homies.
+Version: 0.0.0.9000
+Authors@R: 
+    person("sunny", "Kumar", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: my homies can use this package to draw graphs
+             in whatever way they can.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    ggplot2,
+    rlang
