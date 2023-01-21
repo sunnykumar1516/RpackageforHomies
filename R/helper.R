@@ -1,15 +1,17 @@
 
 
-#' created histogram
+#' creates histogram
 #'
 #' @param bhai_use_this_data pass data
 #' @param use_this_column pass the column
 #' @param Bhai_use_this_colour pass the colour
 #'
-#' @return
+#' @return  it returns the graph drawn
 #' @export
 #'
-#' @examples
+#' @examples bhai_create_histogram(bhai_use_this_data=cars,
+#' use_this_column=dist,
+#' Bhai_use_this_colour='red')
 bhai_create_histogram<- function(bhai_use_this_data,use_this_column,Bhai_use_this_colour="#e9ecef"){
   ggplot2::ggplot(bhai_use_this_data, ggplot2::aes(x={{use_this_column}})) +
     ggplot2::geom_histogram(fill="#69b3a2",color=Bhai_use_this_colour, alpha=0.9)
@@ -24,10 +26,16 @@ bhai_create_histogram<- function(bhai_use_this_data,use_this_column,Bhai_use_thi
 #' @param yData  data on y axis
 #' @param bhai_use_this_category_for_colour pass the colour
 #'
-#' @return
+#' @return it returns the graph drawn
 #' @export
 #'
-#' @examples
+#' @examples bhai_create_scatterplot(bhai_use_this_data=iris,
+#' xData=Sepal.Length,
+#' yData = Sepal.Width,
+#' bhai_use_this_category_for_colour=Species)
+#'
+
+#'
 bhai_create_scatterplot<- function(bhai_use_this_data,xData,yData
                                    ,bhai_use_this_category_for_colour){
   ggplot2::ggplot(bhai_use_this_data, ggplot2::aes(x={{xData}}, y={{yData}},
@@ -39,17 +47,21 @@ bhai_create_scatterplot<- function(bhai_use_this_data,xData,yData
 
 
 
-#' created boxplot
+#' creates boxplot
 #'
 #' @param bhai_use_this_data  pass the data
 #' @param xData  data on x axis
 #' @param yData  data on y axis
 #' @param bhai_use_this_category_for_colour category for colour
 #'
-#' @return
+#' @return it returns the graph drawn
 #' @export
 #'
-#' @examples
+#' @examples bhai_create_boxplot(bhai_use_this_data = iris,
+#' xData =  Species,
+#' yData = Sepal.Length
+#' ,bhai_use_this_category_for_colour=Species)
+#'
 bhai_create_boxplot<- function(bhai_use_this_data,xData,yData
                                    ,bhai_use_this_category_for_colour){
   ggplot2::ggplot(bhai_use_this_data, ggplot2::aes(x={{xData}}, y={{yData}},

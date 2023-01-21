@@ -2,7 +2,7 @@
 % Please edit documentation in R/helper.R
 \name{bhai_create_histogram}
 \alias{bhai_create_histogram}
-\title{created histogram}
+\title{creates histogram}
 \usage{
 bhai_create_histogram(
   bhai_use_this_data,
@@ -17,6 +17,14 @@ bhai_create_histogram(
 
 \item{Bhai_use_this_colour}{pass the colour}
 }
+\value{
+it returns the graph drawn
+}
 \description{
-created histogram
+creates histogram
+}
+\examples{
+bhai_create_histogram(bhai_use_this_data=cars,
+use_this_column=dist,
+Bhai_use_this_colour='red')
 }

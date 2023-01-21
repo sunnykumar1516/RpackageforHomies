@@ -2,7 +2,7 @@
 % Please edit documentation in R/helper.R
 \name{bhai_create_boxplot}
 \alias{bhai_create_boxplot}
-\title{created boxplot}
+\title{creates boxplot}
 \usage{
 bhai_create_boxplot(
   bhai_use_this_data,
@@ -20,6 +20,16 @@ bhai_create_boxplot(
 
 \item{bhai_use_this_category_for_colour}{category for colour}
 }
+\value{
+it returns the graph drawn
+}
 \description{
-created boxplot
+creates boxplot
+}
+\examples{
+bhai_create_boxplot(bhai_use_this_data = iris,
+xData =  Species,
+yData = Sepal.Length
+,bhai_use_this_category_for_colour=Species)
+
 }

@@ -20,6 +20,17 @@ bhai_create_scatterplot(
 
 \item{bhai_use_this_category_for_colour}{pass the colour}
 }
+\value{
+it returns the graph drawn
+}
 \description{
 creates scatterplot
+}
+\examples{
+bhai_create_scatterplot(bhai_use_this_data=iris,
+xData=Sepal.Length,
+yData = Sepal.Width,
+bhai_use_this_category_for_colour=Species)
+
+
 }
