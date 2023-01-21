@@ -7,7 +7,8 @@
 bhai_create_histogram(
   bhai_use_this_data,
   use_this_column,
-  Bhai_use_this_colour = "#e9ecef"
+  Bhai_use_this_colour = "#69b3a2",
+  Bhai_use_this_binwidth = 5
 )
 }
 \arguments{
@@ -16,6 +17,8 @@ bhai_create_histogram(
 \item{use_this_column}{pass the column}
 
 \item{Bhai_use_this_colour}{pass the colour}
+
+\item{Bhai_use_this_binwidth}{pass the bin-width here}
 }
 \value{
 it returns the graph drawn
@@ -26,5 +29,7 @@ creates histogram
 \examples{
 bhai_create_histogram(bhai_use_this_data=cars,
 use_this_column=dist,
-Bhai_use_this_colour='red')
+Bhai_use_this_colour='red',
+Bhai_use_this_binwidth = 3 )
+
 }

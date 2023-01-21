@@ -5,16 +5,25 @@
 #' @param bhai_use_this_data pass data
 #' @param use_this_column pass the column
 #' @param Bhai_use_this_colour pass the colour
+#' @param Bhai_use_this_binwidth  pass the bin-width here
 #'
 #' @return  it returns the graph drawn
 #' @export
 #'
 #' @examples bhai_create_histogram(bhai_use_this_data=cars,
 #' use_this_column=dist,
-#' Bhai_use_this_colour='red')
-bhai_create_histogram<- function(bhai_use_this_data,use_this_column,Bhai_use_this_colour="#e9ecef"){
+#' Bhai_use_this_colour='red',
+#' Bhai_use_this_binwidth = 3 )
+#'
+bhai_create_histogram<- function(bhai_use_this_data,
+                                 use_this_column,
+                                 Bhai_use_this_colour="#69b3a2",
+                                 Bhai_use_this_binwidth=5){
   ggplot2::ggplot(bhai_use_this_data, ggplot2::aes(x={{use_this_column}})) +
-    ggplot2::geom_histogram(fill="#69b3a2",color=Bhai_use_this_colour, alpha=0.9)
+  ggplot2::geom_histogram( binwidth=Bhai_use_this_binwidth,
+                             fill=Bhai_use_this_colour,
+                             color="green",
+                             alpha=0.9)
 }
 
 
