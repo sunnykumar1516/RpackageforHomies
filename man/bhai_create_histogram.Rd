@@ -6,7 +6,7 @@
 \usage{
 bhai_create_histogram(
   bhai_use_this_data,
-  use_this_column,
+  bhai_use_this_column,
   Bhai_use_this_colour = "#69b3a2",
   Bhai_use_this_binwidth = 5
 )
@@ -14,7 +14,7 @@ bhai_create_histogram(
 \arguments{
 \item{bhai_use_this_data}{pass data}
 
-\item{use_this_column}{pass the column}
+\item{bhai_use_this_column}{pass column to be used here}
 
 \item{Bhai_use_this_colour}{pass the colour}
 
@@ -28,7 +28,7 @@ creates histogram
 }
 \examples{
 bhai_create_histogram(bhai_use_this_data=cars,
-use_this_column=dist,
+bhai_use_this_column=dist,
 Bhai_use_this_colour='red',
 Bhai_use_this_binwidth = 3 )
 

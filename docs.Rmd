@@ -1,0 +1,73 @@
+---
+title: "test"
+author: "sunny"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+```
+
+
+```{r}
+library(devtools)
+install_github("sunnykumar1516/RpackageforHomies")
+library(HomiePackage1.0)
+```
+
+
+
+```{r}
+bhai_create_histogram(bhai_use_this_data = cars,
+                      use_this_column = dist,
+                      Bhai_use_this_colour = 'black'
+                      )
+```
+
+
+```{r}
+bhai_create_histogram(cars, dist)
+```
+ creating titles and other customization
+
+```{r}
+p<-bhai_create_histogram(cars, dist,Bhai_use_this_binwidth = 20)
+p + ggtitle("put any title here")
+```
+
+```{r}
+View(cars)
+```
+
+```{r}
+bhai_create_boxplot(bhai_use_this_data = iris,
+xData =  Species,
+yData = Sepal.Length
+,bhai_use_this_category_for_colour=Species)
+  
+  
+  
+```
+```{r}
+bhai_create_scatterplot(bhai_use_this_data=iris,
+xData=Sepal.Length,
+yData = Sepal.Width,
+bhai_use_this_category_for_colour=Species)
+```
+
+```{r}
+bhai_create_scatterplot(iris,
+Sepal.Length,
+Sepal.Width,
+Species)
+```
+
+```{r}
+
+```
+

@@ -3,3 +3,6 @@
 export(bhai_create_boxplot)
 export(bhai_create_histogram)
 export(bhai_create_scatterplot)
+export(kanka_create_boxplot)
+export(kanka_create_histogram)
+export(kanka_create_scatterplot)
