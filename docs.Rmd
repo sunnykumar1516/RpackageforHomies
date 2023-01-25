@@ -24,7 +24,7 @@ library(HomiePackage1.0)
 
 ```{r}
 bhai_create_histogram(bhai_use_this_data = cars,
-                      use_this_column = dist,
+                      bhai_use_this_column = dist,
                       Bhai_use_this_colour = 'black'
                       )
 ```
@@ -68,6 +68,9 @@ Species)
 ```
 
 ```{r}
-
+ggplot(mtcars, aes(x=as.factor(cyl) )) + 
+  geom_bar( ) 
+ 
+ 
 ```
 

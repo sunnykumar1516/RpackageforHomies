@@ -86,6 +86,32 @@ bhai_create_boxplot<- function(bhai_use_this_data,
 
 
 
+#' creats bar graph
+#'
+#' @param bhai_use_this_data  pass data here
+#' @param bhai_use_this_column  pass column
+#' @param bhai_use_this_title_for_xAxis  title for x axis
+#' @param bhai_use_this_title_for_yAxis  title for y axis
+#'
+#' @return returns graph
+#' @export
+#'
+#' @examples  bhai_create_bargraph(mtcars,cyl,"cyl","count")
+bhai_create_bargraph<- function(bhai_use_this_data,
+                                bhai_use_this_column,
+                                bhai_use_this_title_for_xAxis="supply title for x-axis",
+                                bhai_use_this_title_for_yAxis="supply title for y-axis"){
+
+
+  ggplot2::ggplot({{bhai_use_this_data}}, ggplot2::aes(x=as.factor({{bhai_use_this_column}}) ,
+                                     fill=as.factor({{bhai_use_this_column}}))) +
+    ggplot2::geom_bar()+
+    ggplot2::theme(legend.position="none")+
+    ggplot2::xlab(bhai_use_this_title_for_xAxis) +
+    ggplot2::ylab(bhai_use_this_title_for_yAxis)
+}
+
+
 
 #' oluşturmak Histogram
 #'
